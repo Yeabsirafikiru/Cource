@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cource Enrolment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Cource Enrolment Form</h2>
+    <form action="index.php" novalidate id="myForm">
+        <fieldset>
+            <legend>Student Info</legend><br>
+            <label for="sid">Student Id:</label>
+            <input type="text" name="student_id" id="sid" required  oninvalid="this.setCustomValidity('Please enter your Id!')" oninput="this.setCustomValidity('')" placeholder="82135464" readonly><br><br>
+
+            <label for="snme">Student Name:</label>
+            <input type="text" name="student_name" id="sname" placeholder="Enter..." minlength="3" maxlength="15" required oninvalid="this.setCustomValidity('Please enter your Name!')" oninput="this.setCustomValidity('')" autofocus><br><br>
+            
+
+            <label for="option"><span style="color: red;">Optional:</span> Upload your Identification.</label>
+            <input type="file" name="identification" id="identify" multiple>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Cource Selection</legend><br>
+            <label for="cource">Select Cource:</label>
+            <select name="cource" id="cource" required>
+                <option value="web_dev">Web Development</option>
+                <option value="data_science">Date Science</option>
+                <option value="ai">Artificial Intelligence</option>
+                <option value="cyber">Cybersecurity</option>
+                <option value="graphic_design">Graphic Design</option>
+            </select><br><br>
+
+            <p>Session Preference:</p>
+            <input type="radio" id="morning" name="session" value="morning">
+            <label for="morning">Morning</label><br><br>
+
+            <input type="radio" id="afternoon" name="session" value="afternoon">
+            <label for="afternoon">Afternoon</label><br><br>
+
+            <input type="radio" id="evening" name="session" value="evening">
+            <label for="evening">Evening</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Payment Plan</legend>
+            <br>
+            <input type="radio" name="payment" id="full" value="full">
+            <label for="full">Full Payment</label><br><br>
+
+            <input type="radio" name="payment" id="installment" value="installment">
+            <label for="installment">Installments</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Confirmation</legend>
+            <input type="checkbox" id="confirm" name="confirm" required oninvalid="this.setCustomValidity('Please mark checkbox!')" oninput="this.setCustomValidity('')">
+            <label for="confirm">I confirm my enrollment for the selected cource and session.</label>
+        </fieldset><br>
+
+        <input type="submit" value="Enroll">
+        <input type="reset" value="Reset">
+
+
+    </form>
+    <script>
+        const form = document.getElementById("myForm");
+        form.addEventListener('submit', e => {
+            form.classList.add('submitted');
+            if (!form.checkValidity()){
+                e.preventDefault();
+                form.reportValidity();
+            }
+        })
+    </script>
+</body>
+</html>
