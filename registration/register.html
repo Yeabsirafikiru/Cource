@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Student Registration</h2>
+        </div>
+        <form action="#" class="form-container">
+            <div class="form-selection">
+                <fieldset>
+                    <legend class="selection-title">Personal Information</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="firstname" class="form-control" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid name!')" oninput="this.setCustomValidity('')" autofocushdf>
+                        </div>
+                        <div class="form-group">
+                          <label for="lastname">Last Name</label>
+                            <input type="text" id="lastname" class="form-control" required placeholder="Enter..."  oninvalid="this.setCustomValidity('Please enter valid name!')" oninput="this.setCustomValidity('')"> 
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            
+                            <label for="dob">Date of Birth <span style="color: red;">*</span></label>
+                            <input type="date" id="dob" class="form-control" required  oninvalid="this.setCustomValidity('Please enter valid date!')" oninput="this.setCustomValidity('')">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Gender <span style="color: red;">*</span></label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    
+                                    <input type="radio" name="gender" id="male">
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" name="gender" id="female">
+                                    <label for="female">Female</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" name="gender" id="other">
+                                    <label for="other">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span style="color: red;">*</span></label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="123-4567-890" oninvalid="this.setCustomValidity('Please enter valid numbere!')" oninput="this.setCustomValidity('')">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" class="form-control" id="email" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid email!')" oninput="this.setCustomValidity('')">
+                        </div>
+                    </div>
+                    
+                </fieldset>
+                <div class="form-selection">
+                    <fieldset>
+                        <legend class="selection-title">Address Information</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="address">Street Address <span style="color: red;">*</span></label>
+                                <input type="text" name="address" id="address" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid Address!')" oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City <span style="color: red;">*</span></label>
+                                <input type="text" name="city" id="city" class="form-control" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid city!')" oninput="this.setCustomValidity('')">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="state">State/Province <span style="color: red;">*</span></label>
+                                <input type="text" name="state" id="state" class="form-control" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid state!')" oninput="this.setCustomValidity('')">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="zip">ZIP/Postal <span style="color: red;">*</span></label>
+                                <input type="text" name="zip" id="zip" class="form-control" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid ZIP code!')" oninput="this.setCustomValidity('')">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="country">Country <span style="color: red;">*</span></label>
+                                <select id="country" class="form-control" required oninvalid="this.setCustomValidity('Please enter valid state!')" oninput="this.setCustomValidity('')">
+                                    <option value="">Select Continent</option>
+                                    <option value="africa">Africa</option>
+                                    <option value="usa">South America</option>
+                                    <option value="canada">North America</option>
+                                    <option value="uk">Europe</option>
+                                    <option value="germany">Asia</option>
+                                    <option value="France">Antarctica</option>
+                                    <option value="australia">Australia</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-selection">
+                        <fieldset>
+                            <legend class="selection-title">Academic Information</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="studentid">Student Id <span style="color: red;">*</span></label>
+                                    <input type="text" name="studentid" id="studentid" class="form-control" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid id!')" oninput="this.setCustomValidity('')">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="major">Major/Field of Study <span style="color: red;">*</span></label>
+                                    <input type="text" name="major" id="major" class="form-control" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid major!')" oninput="this.setCustomValidity('')">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="year">Year of study <span style="color: red;">*</span></label>
+                                    <select id="year" required oninvalid="this.setCustomValidity('Please enter valid state!')" oninput="this.setCustomValidity('')">
+                                        <option value="">Select Year</option>
+                                        <option value="freshman">Freshman</option>
+                                        <option value="sophomore">Sophomore</option>
+                                        <option value="junior">Junior</option>
+                                        <option value="Senior">Senior</option>
+                                        <option value="graduate">Graduate</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="gpa">Current GPA</label>
+                                    <input type="number" id="gpa" class="form-control" step="0.01" min="0" max="4.0">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Interests (Select all that apply)</label>
+                                    <div class="checkbox-group">
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" name="interests" id="sport" value="sport">
+                                        <label for="sport">Sports</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" name="interests" id="arts" value="arts">
+                                        <label for="arts">Arts</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" name="interests" id="technology" value="technology">
+                                        <label for="technology">Technology</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" name="interests" id="science" value="science">
+                                        <label for="science">Science</label>
+                                        </div>
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" name="interests" id="music" value="music">
+                                        <label for="music">Music</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    <div class="form-selection">
+                        <fieldset>
+                            <legend class="selection-title">Account Setup</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="username">Username <span style="color: red;">*</span></label>
+                                    <input type="text" name="username" id="username" class="form-control" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid username!')" oninput="this.setCustomValidity('')" minlength="8" maxlength="16">
+                                    <p class="form-note">Must be at least 8 character long.</p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control" required placeholder="Enter..." oninvalid="this.setCustomValidity('Please enter valid password!')" oninput="this.setCustomValidity('')" minlength="8" maxlength="16">
+                                    <p class="form-note">Must be at least 8 character with uppercase, lowercase, and number</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                     <div class="form-selection">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <div class="checkbox-option">
+                                            <input type="checkbox" id="checkbox" class="form-control" required oninvalid="this.setCustomValidity('Please check checkmark box!')" oninput="this.setCustomValidity('')">
+                                            <label for="term">I agree to the <a href="#">Terms and conditions</a> and <a href="#">Privacy policy</a> <span style="color: red;">*</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn">Create Account</button>
+                                    </div>
+                                </div>
+
+                                <div class="terms">
+                                    Already have an account? <a href="#">Sign in</a>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
