@@ -1,0 +1,104 @@
+<!-- list element -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML LIST DEMO</title>
+    <style>
+        .upper-roman{
+            list-style: upper-roman;
+        }
+        .lowwer-alpha{
+            list-style: lower-alpha;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>HTML list elements demonstration</h1>
+
+    <section>
+        <h2>1. unordered list (&lt;ul&gt;)</h2>
+        <p>default bullets:</p>
+        <ul>
+            <li>apple</li>
+            <li>banana</li>
+            <li>cherry</li>
+        </ul>
+        <p>square bullets:</p>
+        <ul type="square">
+            <li>dog</li>
+            <li>cat</li>
+            <li>rabbit</li>
+        </ul>
+        <p>circle bullets:</p>
+        <ul type="circle">
+            <li>red</li>
+            <li>green</li>
+            <li>blue</li>
+        </ul>
+        <p>no bullets:</p>
+        <ul type="none">
+            <li>item one</li>
+            <li>item two</li>
+            <li>item three</li>
+        </ul>
+    </section>
+    <section>
+        <h2>2. ordered list (&lt;ol&gt;)</h2>
+        <p>default numbering:</p>
+        <ol>
+            <li>turn on the oven</li>
+            <li>mix ingredients</li>
+            <li>bake for 30 minutes</li>
+        </ol>
+        <ol class="upper-roman">
+            <li>introduction</li>
+            <li>background</li>
+            <li>conclusion</li>
+        </ol>
+        <ol class="lowwer-alpha">
+            <li>option 1</li>
+            <li>option 2</li>
+            <li>option 3</li>
+        </ol>
+    </section>
+    <section>
+         <h2>3. description list (&lt;dl&gt;)</h2>
+         <dl>
+            <dt><b>HTML</b></dt>
+            <dd>a markup language for creating web pages.</dd>
+         </dl>
+         <dl>
+            <dt>CSS</dt>
+            <dd>a style sheet language for designing web pages.</dd>
+         </dl>
+         <dl>
+            <dt>Javascript</dt>
+            <dd>a programing language for adding interactivity to web pages.</dd>
+         </dl>
+    </section>
+
+    <section>
+         <h2>4. nasted list</h2>
+         <ul>
+            <li>fruits
+              <ul>
+                <li>apple</li>
+                <li>banana</li>
+                <li>vegetables</li>
+              </ul>
+            </li>
+        </ul>
+            <ol>
+                <li>step 1
+                    <ol>
+                        <li>sub-step a</li>
+                        <li>sub-step b</li>
+                    </ol>
+                </li>
+                <li>step 2</li>
+            </ol>
+    </section>
+ </body>
+ </html>
