@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to CSS Grid</title>
+    <meta name="description" content="E-Learning lesson page example with objectives, reading, media, and quiz.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="site-title">
+                Intro to CSS grid
+            </h1>
+            <nav class="main-nav" aria-label="primary">
+                <a href="#overview">Overview</a>
+                <a href="#objectives">Objectives</a>
+                <a href="#reading">Reading</a>
+                <a href="#media">Media</a>
+                <a href="#quiz">Quiz</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article id="overview" class="card">
+            <h2>Lesson Overview</h2>
+            <p>This lesson introduction the css grid layout system. you'll learn key concepts, view examples, and your knowledge with a short queiz.</p>
+            <p class="meta">Estimate Time: <strong>20-30 minutes</strong>. Difficulty: <strong>Medium</strong></p>
+        </article>
+
+        <section id="objectives" class="card">
+            <h2>Learning Objectives</h2>
+            <ol>
+                <li>Understand the basic terminology of css grid (container, tracker, cell, gap.)</li>
+                <li>Create a simple two-dimentional layout using grid-template-columns and grid-tenplate-rows.</li>
+                <li>Place items with grid-column and grid-row, and use shorthand grid-area.</li>
+            </ol>
+
+            <label for="progress">Your Progress</label>
+            <progress id="progress" value="25" max="100">25%</progress>
+        </section>
+
+        <section id="reading" class="card">
+            <h2>Reading Material</h2>
+            <p>Recomended short reads:</p>
+            <ul>
+                <li><a href="#">MDN: CSS grid layout</a></li>
+                <li><a href="#">A complete Guide to grid - css-tricks</a></li>
+                <li><a href="#">Grid by Example (Rachel Andrew)</a></li>
+            </ul>
+
+            <h3>Example: Simple Grid markup</h3>
+            <pre class="code-block"><code>&lt;div class="grid"&gt;
+    &lt;div&gt;Item 1&lt;/div&gt;
+    &lt;div&gt;Item 2&lt;/div&gt;
+    &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+            </code>
+            </pre>
+
+            <p>And CSS such as:</p>
+            <pre class="code-block"><code>.grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 16px;
+      }</code></pre>
+        </section>
+
+        <section id="media" class="card media">
+            <h2>Media</h2>
+            <p>Watch the short walkthrough video below (or drop in your own MP4.)</p>
+
+            <div class="media-wrapper">
+                <video src="../video/html1.mp4" width="640" height="360" controls poster="../video/profile.jpg"></video>
+                <aside class="side-resources">
+                    <h4>Quick tips</h4>
+                    <ul>
+                        <li>Start by difining rid-template-columns.</li>
+                        <li>Use gap instead of margin where possible.</li>
+                        <li>Remember the diference between auto and fr.</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section id="quiz" class="card">
+            <h2>Quick Quiz</h2>
+            <p>choose the best answer. this quiz has no javascript - it demonstrates semantic form markup and validation attribute.</p>
+
+            <form action="#" method="get" class="card">
+                <fieldset>
+                    <legend>1) Which property defines the number of columns in a grid?</legend><br>
+                    <label><input type="radio" name="q1" value="a" required> grid-rows</label><br><br>
+                    <label><input type="radio" name="q1" value="b" required> grid-columns</label><br><br>
+                    <label><input type="radio" name="q1" value="c" required> grid-gap</label>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>2) what does <code>1fr</code> mean?</legend><br>
+                    <label><input type="radio" name="q2" value="a" required> 1 pixel</label><br><br>
+                    <label><input type="radio" name="q2" value="b" required> One fraction of available space.</label><br><br>
+                    <label><input type="radio" name="q2" value="c" required> 1 fixed value.</label>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>3) which element is used to provide a caption for figures?</legend><br>
+                    <label><input type="radio" name="q3" value="a" required> &lt;caption&gt;</label><br><br>
+                    <label><input type="radio" name="q3" value="b" required> &lt;figcaption&gt;</label><br><br>
+                    <label><input type="radio" name="q3" value="c" required> &lt;summary&gt;</label>
+                </fieldset><br>
+
+                <div class="form-action">
+                    <button type="submit" class="btn">Submit Answer</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <aside class="card" id="extra">
+            <h3>Extra Resources & Downloads</h3>
+            <ul>
+                <li><a href="#">Cheet sheet (pdf)</a></li>
+                <li><a href="#">Practice file (zip)</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 E-Learning Demo . <a href="#">Privacy</a> .</p>
+        </div>
+    </footer>
+</body>
+</html>
