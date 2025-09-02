@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change content</title>
+  </head>
+  <body>
+    <p id="text">Original Text</p>
+    <button onclick="changeText()">Change</button>
+    <script>
+      function changeText() {
+        document.getElementById("text").innerText = "This is changed text";
+      }
+    </script>
+  </body>
+</html>
