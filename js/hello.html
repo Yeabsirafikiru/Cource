@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello</title>
+  </head>
+  <body>
+    <p id="msg"></p>
+    <!-- 1, Hello world -->
+    <script>
+      console.log("Hello, World");
+      document.getElementById("msg").innerText = "Hello, World";
+    </script>
+    <!-- 2, user info -->
+    <script>
+      let name = "john";
+      let age = "20";
+      let color = "blue";
+      console.log(
+        `My name is ${name}, I am ${age} years old, and my fovorite color is ${color}`
+      );
+    </script>
+    <!-- 3, student score -->
+    <script>
+      let score = parseInt(prompt("Enter your score:"));
+      let grade;
+
+      if (score > 100) grade = "Please Enter valid persentage";
+      else if (score >= 90) grade = "A";
+      else if (score >= 80) grade = "B";
+      else if (score >= 70) grade = "C";
+      else if (score >= 60) grade = "D";
+      else grade = "F";
+
+      console.log("Grade: " + grade);
+    </script>
+    <!-- 4, login info -->
+
+    <script>
+      let username = "admin";
+      let password = "1234";
+      let user = prompt("Enter Username:");
+      let pass = prompt("Enter Password:");
+
+      if (user === username && pass === password) {
+        alert("Login Successful");
+      } else {
+        alert("Invalid credentials");
+        9;
+      }
+    </script>
+
+    <!-- 5, number return -->
+
+    <script>
+      function square(num) {
+        return num * num;
+      }
+      console.log(square(5));
+    </script>
+
+    <!-- 6, word count -->
+
+    <script>
+      let sentence = prompt("Enter a sentence");
+      let word = sentence.trim().split(/\s+/);
+      console.log("Word count = " + word.length);
+    </script>
+  </body>
+</html>

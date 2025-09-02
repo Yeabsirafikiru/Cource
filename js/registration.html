@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      input,
+      select {
+        margin: 5px;
+        padding: 5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 15px;
+      }
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background: #f2f2f2;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Student Registration Form</h2>
+    <form action="#" id="studentForm">
+      <input type="text" name="name" id="name" placeholder="Name" /><br />
+      <input type="number" name="age" id="age" placeholder="Name" /><br />
+      <select name="cource" id="cource">
+        <option value="">-- select cource --</option>
+        <option value="js">Javascript</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+      </select>
+      <button type="button" onclick="registerStudent()">Register</button>
+      <p id="error" class="error"></p>
+    </form>
+
+    <h3>Registered Student</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Cource</th>
+        </tr>
+      </thead>
+      <tbody id="studentList"></tbody>
+    </table>
+
+    <script>
+      function registerStudent() {
+        let name = document.getElementById("name").value.trim();
+        let age = document.getElementById("age").value.trim();
+        let cource = document.getElementById("cource").value.trim();
+        let error = document.getElementById("error");
+
+        if (name === "" || age === "" || cource === "") {
+          error.innerText = "All field are required!";
+          return;
+        }
+        error.innerText = "";
+
+        let row = document.createElement("tr");
+        row.innerHTML = `<td>${name}</td><td>${age}</td><td>${cource}</td>`;
+        document.getElementById("studentList").appendChild(row);
+        document.getElementById("studentForm").reset();
+      }
+    </script>
+  </body>
+</html>
