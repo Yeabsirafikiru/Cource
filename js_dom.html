@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .highlight{
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+  <body>
+    <h1 id="main-title">DOM Practice</h1>
+    <p id="description">Click the button to change this text.</p>
+    <button id="change-text">Change text</button>
+
+    <input type="text" name="input" id="item-input" placeholder="Type new item...">
+    <button id="add-item">Add list item</button>
+
+    <button id="highlight">Highlight Title</button>
+
+    <ul id="item-list">
+        <li>first item</li>
+        <li>second item</li>
+    </ul>
+
+    <script>
+        const description = document.getElementById("description");
+        const changeTextBtn = document.getElementById("change-text");
+        const addItemBtn = document.getElementById("add-item");
+        const highlightBtn = document.getElementById("highlight");
+        const itemList = document.getElementById("item-list");
+        const mainTitle = document.getElementById("main-title");
+        const itemInput = document.getElementById("item-input");
+
+        changeTextBtn.addEventListener("click", () => {
+            description.textContent = "The text has been changed";
+        });
+        addItemBtn.addEventListener("click", () => {
+            const newItemText = itemInput.value.trim();
+            if(newItemText !== ""){
+                const newItem = document.createElement("li");
+                newItem.textContent = newItemText;
+                itemList.appendChild(newItem);
+                itemInput.value = "";
+            }
+        });
+        itemInput.addEventListener("keydown", (e) => {
+            if(e.key === "Enter"){
+                addItemBtn.click();
+            }
+        });
+
+        highlightBtn.addEventListener("click", () => {
+            mainTitle.classList.toggle("highlight");
+        });
+        
+    </script>
+  </body>
+</html>
