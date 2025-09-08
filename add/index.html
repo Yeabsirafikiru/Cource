@@ -19,6 +19,7 @@
           <li><a href="#step2">2</a></li>
           <li><a href="#step3">3</a></li>
           <li><a href="#step4">4</a></li>
+          <li><a href="#step5">5</a></li>
         </ol>
       </nav>
 
@@ -60,6 +61,43 @@
 
         <fieldset id="step2" class="form-step">
           <legend>
+            <b><i>Address Information</i></b>
+          </legend>
+
+          <div class="form-group">
+            <label for="addressLine1"
+              >Address Line 1 <span style="color: red">*</span></label
+            >
+            <input type="text" id="addressLine1" name="addressLine1" required />
+          </div>
+
+          <div class="form-group">
+            <label for="addressLine2">Address Line 2</label>
+            <input type="text" id="addressLine2" name="addressLine2" />
+          </div>
+
+          <div class="form-group">
+            <label for="city"
+              >City <span style="color: red">*</span></label
+            >
+            <input type="text" id="city" name="city" required />
+          </div>
+
+          <div class="form-group">
+            <label for="postalCode"
+              >Postal Code <span style="color: red">*</span></label
+            >
+            <input type="text" id="postalCode" name="postalCode" required />
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="btn-prev">Previous</button>
+            <button type="button" class="btn-next">Next</button>
+          </div>
+        </fieldset>
+
+        <fieldset id="step3" class="form-step">
+          <legend>
             <b><i>Contact Information</i></b>
           </legend>
 
@@ -95,7 +133,7 @@
           </div>
         </fieldset>
 
-        <fieldset id="step3" class="form-step">
+        <fieldset id="step4" class="form-step">
           <legend>
             <b><i>Event Details</i></b>
           </legend>
@@ -131,13 +169,18 @@
             />
           </div>
 
+          <div class="form-group">
+            <label for="eventDescription">Event Description</label>
+            <textarea id="eventDescription" name="eventDescription" rows="4"></textarea>
+          </div>
+
           <div class="button-group">
             <button type="button" class="btn-prev">Previous</button>
             <button type="button" class="btn-next">Next</button>
           </div>
         </fieldset>
 
-        <fieldset id="step4" class="form-step">
+        <fieldset id="step5" class="form-step">
           <legend>
             <b><i>Review and Submit</i></b>
           </legend>
@@ -155,6 +198,27 @@
               </p>
               <hr />
               <p><strong>Gender:</strong> <span id="review-gender"></span></p>
+              <hr />
+            </div>
+
+            <div class="review-section">
+              <h3>&#10003; Address Information</h3>
+              <p>
+                <strong>Address Line 1:</strong>
+                <span id="review-addressLine1"></span>
+              </p>
+              <hr />
+              <p>
+                <strong>Address Line 2:</strong>
+                <span id="review-addressLine2"></span>
+              </p>
+              <hr />
+              <p><strong>City:</strong> <span id="review-city"></span></p>
+              <hr />
+              <p>
+                <strong>Postal Code:</strong>
+                <span id="review-postalCode"></span>
+              </p>
               <hr />
             </div>
 
@@ -184,6 +248,11 @@
               <p>
                 <strong>Event Location:</strong>
                 <span id="review-eventLocation"></span>
+              </p>
+              <hr />
+              <p>
+                <strong>Event Description:</strong>
+                <span id="review-eventDescription"></span>
               </p>
               <hr />
             </div>
