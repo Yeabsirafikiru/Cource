@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>evers-registration</title>
+    <link rel="stylesheet" href="styles.evers.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>Vital Events Registration System</h2>
+        <p>Please complete all steps to register your vital event!!</p>
+      </header>
+
+      <nav class="progress-nav">
+        <ol>
+          <li><a href="#step1" class="active">1</a></li>
+          <li><a href="#step2">2</a></li>
+          <li><a href="#step3">3</a></li>
+          <li><a href="#step4">4</a></li>
+        </ol>
+      </nav>
+
+      <form id="vitalEventsForm" action="process.php" method="POST">
+        <!-- Step 1: Personal Information -->
+        <fieldset id="step1" class="form-step active">
+          <legend>
+            <b><i>Personal Information</i></b>
+          </legend>
+
+          <div class="form-group">
+            <label for="fullName" class="headers"
+              >Full Name <span style="color: red">*</span></label
+            >
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender <span style="color: red">*</span></label>
+            <select id="gender" name="gender" required>
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dateOfBirth"
+              >Date of Birth <span style="color: red">*</span></label
+            >
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required />
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="btn-next">Next</button>
+          </div>
+        </fieldset>
+
+        <fieldset id="step2" class="form-step">
+          <legend>
+            <b><i>Contact Information</i></b>
+          </legend>
+
+          <div class="form-group">
+            <label for="nationality"
+              >Nationality <span style="color: red">*</span></label
+            >
+            <select id="nationality" name="nationality" required>
+              <option value="">Select Nationality</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cameroon">Cameroon</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="phone"
+              >Phone Number <span style="color: red">*</span></label
+            >
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="email"
+              >Email Address <span style="color: red">*</span></label
+            >
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="btn-prev">Previous</button>
+            <button type="button" class="btn-next">Next</button>
+          </div>
+        </fieldset>
+
+        <fieldset id="step3" class="form-step">
+          <legend>
+            <b><i>Event Details</i></b>
+          </legend>
+
+          <div class="form-group">
+            <label for="eventType"
+              >Event Type <span style="color: red">*</span></label
+            >
+            <select id="eventType" name="eventType" required>
+              <option value="">Select Event Type</option>
+              <option value="Birth">Birth</option>
+              <option value="Marriage">Marriage</option>
+              <option value="Divorce">Divorce</option>
+              <option value="Death">Death</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="eventDate"
+              >Event Date <span style="color: red">*</span></label
+            >
+            <input type="date" id="eventDate" name="eventDate" required />
+          </div>
+
+          <div class="form-group">
+            <label for="eventLocation"
+              >Event Location <span style="color: red">*</span></label
+            >
+            <input
+              type="text"
+              id="eventLocation"
+              name="eventLocation"
+              required
+            />
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="btn-prev">Previous</button>
+            <button type="button" class="btn-next">Next</button>
+          </div>
+        </fieldset>
+
+        <fieldset id="step4" class="form-step">
+          <legend>
+            <b><i>Review and Submit</i></b>
+          </legend>
+
+          <div class="my-scroll">
+            <div class="review-section">
+              <h3>&#10003; Personal Information</h3>
+              <p>
+                <strong>Full Name:</strong> <span id="review-fullName"></span>
+              </p>
+              <hr />
+              <p>
+                <strong>Date of Birth:</strong>
+                <span id="review-dateOfBirth"></span>
+              </p>
+              <hr />
+              <p><strong>Gender:</strong> <span id="review-gender"></span></p>
+              <hr />
+            </div>
+
+            <div class="review-section">
+              <h3>&#10003; Contact Information</h3>
+              <p>
+                <strong>Nationality:</strong>
+                <span id="review-nationality"></span>
+              </p>
+              <hr />
+              <p><strong>Phone:</strong> <span id="review-phone"></span></p>
+              <hr />
+              <p><strong>Email:</strong> <span id="review-email"></span></p>
+              <hr />
+            </div>
+
+            <div class="review-section">
+              <h3>&#10003; Event Details</h3>
+              <p>
+                <strong>Event Type:</strong> <span id="review-eventType"></span>
+              </p>
+              <hr />
+              <p>
+                <strong>Event Date:</strong> <span id="review-eventDate"></span>
+              </p>
+              <hr />
+              <p>
+                <strong>Event Location:</strong>
+                <span id="review-eventLocation"></span>
+              </p>
+              <hr />
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="btn-prev">Previous</button>
+            <button type="submit" class="btn-submit">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="script.evers.js"></script>
+  </body>
+</html>
