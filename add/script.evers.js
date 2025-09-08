@@ -63,6 +63,15 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (field.name === "dateOfBirth") {
           showError(field, `Please enter your birth date.`);
           isValid = false;
+        } else if (field.name === "addressLine1") {
+          showError(field, `Please enter your address.`);
+          isValid = false;
+        } else if (field.name === "city") {
+          showError(field, `Please enter your city.`);
+          isValid = false;
+        } else if (field.name === "postalCode") {
+          showError(field, `Please enter your postal code.`);
+          isValid = false;
         } else if (field.name === "nationality") {
           showError(field, `Please select your nationality.`);
           isValid = false;
@@ -131,12 +140,17 @@ document.addEventListener("DOMContentLoaded", function () {
       "fullName",
       "dateOfBirth",
       "gender",
+      "addressLine1",
+      "addressLine2",
+      "city",
+      "postalCode",
       "nationality",
       "phone",
       "email",
       "eventType",
       "eventDate",
       "eventLocation",
+      "eventDescription"
     ];
     fieldsToReview.forEach((field) => {
       const inputElement = document.getElementById(field);
