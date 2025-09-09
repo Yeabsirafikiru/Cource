@@ -1,6 +1,0 @@
-ALTER TABLE vital_events 
-ADD COLUMN address_line1 VARCHAR(255) NOT NULL,
-ADD COLUMN address_line2 VARCHAR(255),
-ADD COLUMN city VARCHAR(100) NOT NULL,
-ADD COLUMN postal_code VARCHAR(20) NOT NULL,
-ADD COLUMN event_description TEXT;
